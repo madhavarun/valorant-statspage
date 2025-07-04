@@ -1,0 +1,102 @@
+@import './colors.css';
+
+.game-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 55%;
+  margin: 0.5rem auto 0.5rem auto;
+  background-color: var(--nord-base-1);
+}
+
+.game-card:hover {
+  background-color: var(--nord-base-3);
+  cursor: pointer;
+}
+
+.game-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.team-display-left {
+  text-align: left;
+}
+
+.team-display-right {
+  text-align: right;
+}
+
+.team-display-left,
+.team-display-right {
+  width: 30%;
+}
+.team-name {
+  font-weight: bold;
+  font-size: .875rem;
+  margin-bottom: .5rem;
+  color: var(--nord-text-0);
+}
+
+.team-players {
+  font-size: 0.875rem;
+  line-height: 0.3;
+  color: var(--nord-text-1);
+}
+
+.middle-section {
+  display: block;
+  text-align: center;
+}
+
+.game-server {
+  font-size: 0.75rem;
+  color: var(--subtext-0);
+  margin-top: 0.25rem;
+}
+
+.game-score {
+  font-weight: 500; /* Medium weight */
+  font-size: 3rem;
+}
+
+.score-winner {
+  color: var(--nord-green);
+}
+.score-loser {
+  color: var(--nord-red);
+}
+.score-separator {
+  color: var(--nord-text-0);
+}
+
+.game-start-time {
+  color: var(--subtext-0);
+}
+
+.map-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.map-image {
+  border-radius: 6px;
+  width: 128px;
+  height: 72px;
+  object-fit: cover;
+  margin-top: 1.25rem;
+}
+
+.map-name {
+  font-weight: 500; /* Medium weight */
+  font-size: 1.5rem;
+  margin-top: .5rem;
+  margin-bottom: 0;
+  color: var(--nord-blue-2);
+}

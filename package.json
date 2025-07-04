@@ -1,0 +1,23 @@
+{
+  "name": "valorant-statspage",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "plugin-react": "^0.0.1-security",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.3",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0"
+  }
+}

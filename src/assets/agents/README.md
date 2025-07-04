@@ -1,0 +1,1 @@
+ASSETS SOURCED FROM https://valorant-api.com/

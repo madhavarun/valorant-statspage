@@ -1,0 +1,21 @@
+:root {
+  --nord-base-0: #2E3440;
+  --nord-base-1: #3B4252;
+  --nord-base-2: #434C5E;
+  --nord-base-3: #4C566A;
+  --nord-text-0: #D8DEE9;
+  --nord-text-1: #E5E9F0;
+  --nord-text-2: #ECEFF4;
+  --nord-blue-0: #8FBCBB;
+  --nord-blue-1: #88C0D0;
+  --nord-blue-2: #81A1C1;
+  --nord-blue-3: #5E81AC;
+  --nord-red: #BF616A;
+  --nord-orange: #D08770;
+  --nord-yellow: #EBCB8B;
+  --nord-green: #A3BE8C;
+  --nord-pink: #B48EAD;
+
+  /* Additional colors */
+  --subtext-0: #6C7086;
+}
