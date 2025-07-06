@@ -100,3 +100,16 @@
   margin-bottom: 0;
   color: var(--nord-blue-2);
 }
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%; /* or any percentage you want */
+  }
+  .game-card {
+    width: 98%;
+  }
+  .map-image {
+    width: 80px;
+    height: 45px;
+  }
+}
