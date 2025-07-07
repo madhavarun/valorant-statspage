@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #181818;
+  background: var(--nord-base-2);
   padding: 0.5rem 2rem;
 }
 
@@ -19,7 +19,7 @@
 
 .navbar-title {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--nord-text-0);
   font-weight: bold;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .navbar-links a {
-  color: #fff;
+  color: var(--nord-text-0);
   text-decoration: none;
   margin-left: 2rem;
   font-size: 1.1rem;
@@ -40,5 +40,5 @@
 }
 
 .navbar-links a:hover {
-  color: #ff4655;
+  color: var(--nord-blue-0);
 }
