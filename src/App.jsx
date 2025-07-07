@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import MatchView from './MatchView';
 import Scoreboard from './Scoreboard';
 import AddMatchForm from './AddMatchForm';
+import ManageMatchForm from './ManageMatchForm';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -57,7 +58,7 @@ function App() {
         season="s1"
         title=""
       />} />
-      <Route path="/addmatch" element={<AddMatchForm />} />
+      <Route path="/addmatch" element={<ManageMatchForm />} />
       <Route path="/" element={<MatchView games={games} />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

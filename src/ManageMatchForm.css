@@ -1,0 +1,78 @@
+@import "./colors.css";
+
+form {
+  background-color: var(--nord-base-1); /* nord1 */
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--nord-text-0); /* nord4 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+form h3 {
+  margin-bottom: 1.5rem;
+  color: var(--nord-text-2); /* nord6 */
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--nord-text-1); /* nord5 */
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--nord-base-0); /* nord0 */
+  color: var(--nord-text-0); /* nord4 */
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 2px var(--nord-blue-1); /* nord8 */
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: var(--nord-blue-1); /* nord8 */
+  color: var(--nord-base-0); /* nord0 */
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--nord-blue-2); /* slightly darker nord8 */
+}
+
+pre {
+  background-color: var(--nord-base-0); /* nord0 */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+pre.success {
+  color: var(--nord-green); /* nord14 */
+}
+
+pre.error {
+  color: var(--nord-red); /* nord11 */
+}
