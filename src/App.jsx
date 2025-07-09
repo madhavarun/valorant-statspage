@@ -4,8 +4,9 @@ import { API_URL } from '../config';
 import Navbar from './Navbar'
 import MatchView from './MatchView';
 import Scoreboard from './Scoreboard';
-import AddMatchForm from './AddMatchForm';
 import ManageMatchForm from './ManageMatchForm';
+import MatchPage from './MatchPage';
+import './App.css';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -40,30 +41,32 @@ function App() {
   }
 
   return (
-  <Router>
-    <Navbar />
-    <Routes>
-      <Route path="/match/:matchId" element={<Scoreboard
-        type="match"
-        season="s1"
-        title="Match Scoreboard"
-      />} />
-      <Route path="/player/:playerId" element={<Scoreboard
-        type="player"
-        season="s1"
-        title="Player Stats"
-      />} />
-      <Route path="/players" element={<Scoreboard
-        type="players"
-        season="s1"
-        title=""
-      />} />
-      <Route path="/addmatch" element={<ManageMatchForm />} />
-      <Route path="/" element={<MatchView games={games} />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  </Router>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/match/:matchId" element={<MatchPage />} />
+        <Route
+          path="/player/:playerId"
+          element={
+            <div className='player-stats'>
+              <Scoreboard type="player" season="s1" title="Player Stats" />
+            </div>
+          }
+        />
+        <Route
+          path="/players"
+          element={
+            <div className='player-stats'>
+              <Scoreboard type="players" season="s1" title="Overall player stats for season" />
+            </div>
+          }
+        />
+        <Route path="/addmatch" element={<ManageMatchForm />} />
+        <Route path="/" element={<MatchView games={games} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
