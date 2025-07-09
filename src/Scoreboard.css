@@ -1,219 +1,82 @@
-/* Scoreboard Container */
-.scoreboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #1a1a1a;
-  color: #fff;
+@import './colors.css';
+
+.team-scoreboard {
+    margin-bottom: 0px;
+    max-width: 1200px;
 }
 
 .scoreboard-header {
-  text-align: center;
-  margin-bottom: 30px;
+    color: var(--nord-text-0);
 }
 
-.scoreboard-header h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #fff;
-  margin: 0;
-}
-
-/* Team Scoreboard */
-.team-scoreboard {
-  margin-bottom: 40px;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.team-header {
-  background-color: #3a3a3a;
-  padding: 15px 20px;
-  border-bottom: 2px solid #4a4a4a;
-}
-
-.team-header h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Table Structure */
 .scoreboard-table {
-  width: 100%;
+    width: 100%;
+    border-collapse: collapse; /* Removes space between cell borders */
+    background-color: var(--nord-base-2);
+    color: var(--nord-text-0);
 }
 
-.table-header {
-  display: grid;
-  grid-template-columns: var(--grid-cols);
-  background-color: #404040;
-  border-bottom: 1px solid #555;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.scoreboard-table th, .scoreboard-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--nord-base-1); /* Separator line between rows */
 }
 
-.header-cell {
-  padding: 12px 8px;
-  text-align: center;
-  color: #ccc;
-  border-right: 1px solid #555;
+.scoreboard-table thead th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
 }
 
-.header-cell:last-child {
-  border-right: none;
+.scoreboard-table tbody tr:hover {
+    background-color: var(--nord-base-3);
 }
 
-.player-col {
-  text-align: left;
-  padding-left: 20px;
+/* Align stat columns to the center */
+.stat-col, .stat-cell-container {
+    text-align: center;
 }
 
-/* Player Row */
-.player-row {
-  display: grid;
-  grid-template-columns: var(--grid-cols);
-  border-bottom: 1px solid #333;
-  transition: background-color 0.2s ease;
-}
-
-.player-row:hover {
-  background-color: #333;
-}
-
-.player-row:last-child {
-  border-bottom: none;
-}
-
-/* Player Info */
+/* Player cell styling */
 .player-info {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  gap: 12px;
-}
-
-.player-agent {
-  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 250px;
 }
 
 .agent-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  background-color: #555;
-}
-
-.player-details {
-  flex: 1;
-  min-width: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
 }
 
 .player-name {
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    font-weight: bold;
+    color: var(--nord-text-0);
 }
 
-.player-rank {
-  font-size: 11px;
-  color: #aaa;
-  margin-top: 2px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Stat Cells */
-.stat-cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-  border-right: 1px solid #333;
+a:hover .player-name {
+    color: var(--nord-blue-0); /* Highlight name on hover */
 }
 
-.stat-cell:last-child {
-  border-right: none;
-}
-
-/* Special Stat Styling */
-.stat-cell.primary {
-  font-weight: 600;
-  color: #4fc3f7;
-}
-
+/* Stat cell specific styles */
 .stat-cell.positive {
-  color: #4caf50;
+    color: var(--nord-green); /* Green */
 }
 
 .stat-cell.negative {
-  color: #f44336;
+    color: var(--nord-red); /* Red */
 }
 
-.stat-cell-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat-cell-container .stat-cell {
-  border-right: none;
-  padding: 0;
-}
-
-/* Loading and Error States */
-.loading, .error {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 16px;
-  color: #ccc;
-}
-
-.error {
-  color: #f44336;
-  background-color: rgba(244, 67, 54, 0.1);
-  border: 1px solid rgba(244, 67, 54, 0.3);
-  border-radius: 8px;
-  margin: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .header-cell,
-  .stat-cell {
-    font-size: 11px;
-    padding: 10px 6px;
-  }
-  
-  .player-info {
-    padding: 10px 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .scoreboard-container {
-    padding: 10px;
-  }
-  
-  .header-cell,
-  .stat-cell {
-    font-size: 10px;
-    padding: 8px 4px;
-  }
-  
-  .player-name {
-    font-size: 12px;
-  }
-  
-  .player-rank {
-    font-size: 10px;
-  }
+.scoreboard-team-separator {
+    width: 100%;
+    height: 20px;
 }

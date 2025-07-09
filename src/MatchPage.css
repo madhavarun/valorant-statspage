@@ -1,0 +1,122 @@
+@import './colors.css'; /* Make sure this path is correct */
+
+.match-page-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mp-match-header {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    background-color: var(--nord-base-1);
+    color: var(--nord-text-2);
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.mp-match-header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+}
+
+.mp-map-time-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mp-match-time {
+    margin-top: 0px;
+}
+
+.mp-map-name {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mp-match-start {
+    font-size: 1.1em;
+    color: var(--nord-text-0);
+    position: absolute; /* Position relative to .mp-match-header-top */
+    right: 20px;
+    top: 10px;
+}
+
+.mp-match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.mp-team-details {
+    flex: 1;
+    text-align: center; 
+}
+
+.mp-team-name {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+}
+
+.mp-round-scores {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.mp-rounds-atk {
+    color: var(--nord-red);
+}
+
+.mp-rounds-def {
+    color: var(--nord-green);
+}
+
+.mp-rounds-separator {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.mp-match-score {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.mp-winner-score {
+    color: var(--nord-green);
+}
+
+.mp-loser-score {
+    color: var(--nord-red);
+}
+
+.mp-score-separator {
+    color: var(--nord-text-0); /* Or a specific Nord color for separators */
+}
+
+.mp-stats-subheading {
+    font-weight: bold;
+    color: var(--nord-text-0);
+    margin-bottom: 5px;
+}
+
+.mp-scoreboards-container {
+    padding: 10px;
+    background-color: var(--nord-base-1);
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+}
