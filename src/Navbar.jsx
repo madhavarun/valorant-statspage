@@ -41,20 +41,20 @@ function Navbar() {
     const [search, setSearch] = useState('');
     return (
     <div className='navbar'>
-        <Link to="/">
-            <div className='navbar-left'>
-                <img className='navbar-logo' src={LogoImage} />
+        <div className='navbar-left'>
+            <img className='navbar-logo' src={LogoImage} />
+            <Link to="/">
                 <span className='navbar-title'>{SITE_TITLE}</span>
-                <input
-                    className="navbar-search"
-                    type="text"
-                    placeholder="Search for players"
-                    value={search}
-                    onChange={e => setSearch(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                />
-            </div>
-        </Link>
+            </Link>
+            <input
+                className="navbar-search"
+                type="text"
+                placeholder="Search for players"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
+            />
+        </div>
         <div className='navbar-links'>
             <Link to="/">Home</Link>
             <Link to="/players">Stats</Link>
