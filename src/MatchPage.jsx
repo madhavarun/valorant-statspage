@@ -83,12 +83,12 @@ function MatchPage() {
                             <span className={`mp-rounds-${getSideShort(team1Attackers)}`}>{team1.rounds_won[getSideShort(team1Attackers)]}</span>
                             <span className='mp-rounds-separator'>/</span>
                             <span className={`mp-rounds-${getSideShort(!team1Attackers)}`}>{team1.rounds_won[getSideShort(!team1Attackers)]}</span>
-                            {team1.rounds_won.overtime && (
+                            {team1.rounds_won.overtime >= 0 ? (
                                 <>
                                     <span className='mp-rounds-separator'>/</span>
                                     <span className="mp-rounds-ot">{team1.rounds_won.overtime}</span>
                                 </>
-                            )}
+                            ) : null}
                         </div>
                     </div>
                     <div className="mp-match-score">
@@ -102,12 +102,12 @@ function MatchPage() {
                             <span className={`mp-rounds-${getSideShort(team1Attackers)}`}>{team2.rounds_won[getSideShort(!team1Attackers)]}</span>
                             <span className='mp-rounds-separator'>/</span>
                             <span className={`mp-rounds-${getSideShort(!team1Attackers)}`}>{team2.rounds_won[getSideShort(team1Attackers)]}</span>
-                            {team2.rounds_won.overtime && (
+                            {team2.rounds_won.overtime >= 0 ? (
                                 <>
                                     <span className='mp-rounds-separator'>/</span>
                                     <span className="mp-rounds-ot">{team2.rounds_won.overtime}</span>
                                 </>
-                            )}
+                            ) : null}
                         </div>
                     </div>
                 </div>
