@@ -80,6 +80,10 @@
     color: var(--nord-green);
 }
 
+.mp-rounds-ot {
+    color: var(--nord-text-0);
+}
+
 .mp-rounds-separator {
     margin-left: 3px;
     margin-right: 3px;
